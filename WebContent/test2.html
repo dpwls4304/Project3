@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checking(frm) {
+            if(!frm.chk.checked){
+                console.log("체크");
+                document.getElementById("warn").innerHTML = "<b>체크하세요</b>";
+            }
+        }
+        // function show(obj) {
+        //     //alert("체크동작");
+        //     if(obj.checked){
+        //         document.getElementById("warn").innerHTML = "";
+        //     }
+        // }
+    </script>
+</head>
+<body>
+    <form name="frm">
+        <input type="checkbox" name="chk" />체크하세요
+        <br />
+        <button onclick="checking(this.form);">확인</button>
+        <br>
+        <span id="warn"></span>
+    </form>
+</body>
+</html>
